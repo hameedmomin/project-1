@@ -28,6 +28,9 @@ resource "azurerm_network_interface" "example" {
     private_ip_address_allocation = "Dynamic"
   }
 }
+provider "azurerm" {
+  features {}
+}
 
 resource "azurerm_linux_virtual_machine" "example" {
   name                = "example-machine"
