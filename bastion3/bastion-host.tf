@@ -30,7 +30,7 @@ resource "azurerm_linux_virtual_machine" "bastion_host_linuxvm" {
   network_interface_ids           = [ azurerm_network_interface.bastion-host-nic.id ]
   admin_ssh_key {
     username                      = "azureuser"
-    public_key                    = file("${path.module}/gitignore/ssh-keys/.ssh.pub")
+    public_key                    = file("${path.module}/.gitignore/ssh-keys/.ssh.pub")
   }
   os_disk {
     caching                       = "ReadWrite"
