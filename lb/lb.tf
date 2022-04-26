@@ -1,6 +1,6 @@
 resource "azurerm_public_ip" "frontendip" {
   name                                            = "PublicIPForLB"
-  location                                        = "West US"
+  location                                        = azurerm_resource_group.project2.location
   resource_group_name                             = azurerm_resource_group.project2.name
   allocation_method                               = "Static"
   sku                                             = "Standard"
