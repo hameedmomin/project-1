@@ -25,6 +25,7 @@ resource "azurerm_lb_probe" "lb-probe" {
   loadbalancer_id                                 = azurerm_lb.weblb.id
   name                                            = "lb-probe"
   port                                            = 80
+  protocol                                        = "Tcp"
   resource_group_name                             = azurerm_resource_group.project2.name
 }
 
