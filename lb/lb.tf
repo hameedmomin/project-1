@@ -10,6 +10,7 @@ resource "azurerm_lb" "weblb" {
   name                                            = "TestLoadBalancer"
   location                                        = azurerm_resource_group.project2.location
   resource_group_name                             = azurerm_resource_group.project2.name
+  sku                                             = "Standard"
 
   frontend_ip_configuration {
     name                                          = "frontendip"
