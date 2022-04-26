@@ -26,7 +26,7 @@ resource "azurerm_lb_probe" "lb-probe" {
   name                                            = "lb-probe"
   port                                            = 80
   protocol                                        = "Tcp"
-  resource_group_name                             = azurerm_resource_group.project2.name
+#  resource_group_name                             = azurerm_resource_group.project2.name
 }
 
 resource "azurerm_lb_rule" "lb-rule" {
