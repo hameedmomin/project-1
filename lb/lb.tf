@@ -36,7 +36,7 @@ resource "azurerm_lb_rule" "lb-rule" {
   frontend_port                                   = 80
   backend_port                                    = 80
   frontend_ip_configuration_name                  = azurerm_lb.weblb.frontend_ip_configuration[0].name
-  backend_address_pool_ids                        = azurerm_lb_backend_address_pool.lb-backend.id
+ # backend_address_pool_ids                        = azurerm_lb_backend_address_pool.lb-backend.id
   probe_id                                        = azurerm_lb_probe.lb-probe.id
  # resource_group_name                             = azurerm_resource_group.project2.name
 
